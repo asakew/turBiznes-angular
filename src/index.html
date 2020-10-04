@@ -9,5 +9,37 @@
 </head>
 <body>
   <app-root></app-root>
+<script>
+// Left Menu Search
+function menuSearch() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("menuSearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("leftMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+// scrollTop
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollTop").style.display = "block";
+  } else {
+    document.getElementById("scrollTop").style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>

@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "sass/variables"
+@import "sass/mixins"
+
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body
+	@include qoraFon
+	font-family: "Lato", sans-serif
+	font-size: 1rem
+
+.user-resize
+	float: left
+	border: 2px outset
+	padding: 20px 
+	min-width: 15%
+	resize: both
+	overflow: auto
+	outline-offset: 0
+
+@import "sass/responsive"
+
+// .anchor:hover
+//     transform: translateY(-3px)
+//     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35)
+
+::-moz-selection
+	color: $oq
+	background: $qora
+
+::selection 
+	color: $oq
+	background: $qora
