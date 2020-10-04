@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "turBiznes"
+    }
+  },
+  "defaultProject": "turBiznes",
+  "cli": {
+    "analytics": "5bae09f5-52bb-4899-9189-bfebdf8f7edd"
+  }
 }
